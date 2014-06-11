@@ -1,0 +1,32 @@
+{
+  "name": "gulp-tipograph",
+  "version": "0.1.0",
+  "description": "Tipograph plugin for Gulp",
+  "license": "MIT",
+  "repository": "nevyk/gulp-tipograph",
+  "author": {
+    "name": "nevyk",
+    "email": "petr.nevyhosteny@gmail.com",
+    "url": "https://github.com/nevyk"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin"
+  ],
+  "dependencies": {
+    "gulp-util": "~2.2.16",
+    "through2": "~0.4.2",
+    "tipograph": "~0.3.1"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
