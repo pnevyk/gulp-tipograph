@@ -1,6 +1,6 @@
 # [gulp](http://gulpjs.com)-tipograph
 
-> Tipograph plugin for Gulp
+> [Tipograph](https://github.com/nevyk/tipograph) plugin for Gulp
 
 
 ## Install
