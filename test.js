@@ -43,7 +43,7 @@ it('should be configurable what to replace', function (cb) {
 
 it('should add custom rules into tipograph', function (cb) {
     tipograph.addCustomRule('lorem', 'ipsum');
-    
+
 	var stream = tipograph();
 
 	stream.on('data', function (file) {

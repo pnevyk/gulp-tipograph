@@ -9,13 +9,13 @@ var i, len, input,
 
 var tipograph = function (options) {
     options = options || {};
-    
+
     for (i = 0, len = parts.length; i < len; i++) {
         options[parts[i]] = options[parts[i]] === false ? false : true;
     }
-        
+
     options.html = options.html === false ? false : true;
-    
+
     if (options.language) {
         replace.configure(languages[options.language]);
     }
@@ -30,7 +30,7 @@ var tipograph = function (options) {
             this.emit('error', new gutil.PluginError('gulp-tipograph', 'Streaming not supported'));
             return cb();
         }
-        
+
         input = file.contents.toString();
 
         for (i = 0, len = parts.length; i < len; i++) {
@@ -38,7 +38,7 @@ var tipograph = function (options) {
                 input = replace[parts[i]](input, options.html);
             }
         }
-        
+
         file.contents = new Buffer(input);
 
         this.push(file);
