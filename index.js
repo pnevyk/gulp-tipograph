@@ -25,3 +25,5 @@ module.exports = function (options) {
         cb();
     });
 };
+
+module.exports.presets = tipograph.presets;

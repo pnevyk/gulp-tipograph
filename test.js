@@ -42,3 +42,8 @@ it('should pass options into tipograph', function (cb) {
 
     stream.end();
 });
+
+it('should reexport tipograph other api', function () {
+    assert.doesNotThrow(function () { tipograph.presets(); });
+    assert.ok(Array.isArray(tipograph.presets()));
+});
