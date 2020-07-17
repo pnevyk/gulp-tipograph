@@ -1,6 +1,6 @@
 {
     "name": "gulp-tipograph",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "description": "Tipograph plugin for Gulp",
     "license": "MIT",
     "repository": "https://github.com/pnevyk/gulp-tipograph",
@@ -25,7 +25,7 @@
     "dependencies": {
         "gulp-util": "^3.0.8",
         "through2": "^2.0.3",
-        "tipograph": "^0.4.4"
+        "tipograph": "^0.7.0"
     },
     "devDependencies": {
         "mocha": "^5.2.0"
