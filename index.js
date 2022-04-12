@@ -1,6 +1,6 @@
 'use strict';
 
-var gutil = require('gulp-util');
+var PluginError = require('plugin-error');
 var through = require('through2');
 var tipograph = require('tipograph');
 
@@ -14,12 +14,12 @@ module.exports = function (options) {
         }
 
         if (file.isStream()) {
-            this.emit('error', new gutil.PluginError('gulp-tipograph', 'Streaming not supported'));
+            this.emit('error', new PluginError('gulp-tipograph', 'Streaming not supported'));
             return cb();
         }
 
         var input = file.contents.toString();
-        file.contents = new Buffer(typo(input));
+        file.contents = Buffer.from(typo(input));
 
         this.push(file);
         cb();

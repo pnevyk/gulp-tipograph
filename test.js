@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert');
-var gutil = require('gulp-util');
+var Vinyl = require('vinyl');
 var tipograph = require('./index');
 
 it('should use tipograph to apply typography rules', function (cb) {
@@ -12,10 +12,10 @@ it('should use tipograph to apply typography rules', function (cb) {
 
     stream.on('end', cb);
 
-    stream.write(new gutil.File({
+    stream.write(new Vinyl({
         base: __dirname,
         path: __dirname + 'file.txt',
-        contents: new Buffer('"lorem"')
+        contents: Buffer.from('"lorem"')
     }));
 
     stream.end();
@@ -34,10 +34,10 @@ it('should pass options into tipograph', function (cb) {
 
     stream.on('end', cb);
 
-    stream.write(new gutil.File({
+    stream.write(new Vinyl({
         base: __dirname,
         path: __dirname + 'file.txt',
-        contents: new Buffer('<pre> "keep" </pre> -- "lorem"')
+        contents: Buffer.from('<pre> "keep" </pre> -- "lorem"')
     }));
 
     stream.end();
