@@ -28,7 +28,7 @@
         "tipograph": "^0.7"
     },
     "devDependencies": {
-        "mocha": "^9",
+        "mocha": "^11",
         "vinyl": "^2"
     }
 }
